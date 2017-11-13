@@ -15,7 +15,7 @@ install
 example
 -------
 
-``` js
+```js
 var m3u8 = require('@chovy/m3u8');
 var fs   = require('fs');
 
@@ -34,7 +34,7 @@ parser.on('m3u', function(m3u) {
 All items and the m3u object have `toString()` methods for conversion to m3u8.
 Attributes and properties have getter/setters on m3u and item objects:
 
-```
+```js
 parser.on('item', function(item) {
   var duration = item.get('bandwidth');
   item.set('uri', 'http://example.com/' + item.get('uri'));
@@ -42,7 +42,8 @@ parser.on('item', function(item) {
 ```
 
 The M3U and Item objects are available on m3u8:
-```
+
+```js
 var m3u8 = require('@chovy/m3u8');
 
 var m3u = m3u8.M3U.create();
@@ -53,3 +54,5 @@ m3u.addPlaylistItem({
 ```
 
 See tests for more usage patterns.
+
+You can set `M3U8_DEBUG` environment variable to get debugging warnings about unkown attributes.
