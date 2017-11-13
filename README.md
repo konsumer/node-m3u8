@@ -55,4 +55,4 @@ m3u.addPlaylistItem({
 
 See tests for more usage patterns.
 
-You can set `M3U8_DEBUG` environment variable to get debugging warnings about unkown attributes.
+You can set `M3U8_DEBUG` environment variable to get debugging warnings about unknown attributes.
