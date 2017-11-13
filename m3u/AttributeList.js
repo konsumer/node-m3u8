@@ -122,7 +122,9 @@ var parse = {
         }
     },
     'unknown': function parseUnknown(value, key) {
-        console.error('Handling value:', value, ' for unknown key:', key);
+        if (process.env.M3U8_DEBUG){
+            console.error('Handling value:', value, ' for unknown key:', key);
+        }
         return value;
     }
 };
